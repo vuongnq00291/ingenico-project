@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.ingenico.annotation.TSController;
 import com.ingenico.cache.GlobalCache;
+import com.ingenico.model.TSException;
 import com.ingenico.model.TSResponse;
 import com.ingenico.model.TrasferInfo;
 import com.ingenico.service.MoneyManagementService;
@@ -24,6 +25,12 @@ public class MoneyManagementController {
 	public ResponseEntity<TSResponse> transfer(@RequestBody TrasferInfo info) throws Exception{
 		Object locktoaccount = cache.getLock(info.getToAccountId());
 		Object lockfromaccount = cache.getLock(info.getFromAccountId());
+		if(locktoaccount==null){
+			throw new TSException("Account id "+info.getToAccountId() +"does not exist.");
+		}
+		if(lockfromaccount==null){
+			throw new TSException("Account id "+info.getFromAccountId() +"does not exist.");
+		}
 		synchronized(lockfromaccount){
 			synchronized(locktoaccount){
 				System.out.println("start");

@@ -24,8 +24,13 @@ public class AccountManagementServiceImpl implements AccountManagementService{
 		if(account.getBalance()<0){
 			throw new TSException("Balance must be positive number.");
 		}
+		account.setId(null);
 		accountDAO.create(account);
     }
+	@Transactional
+	public Account get(int id) throws Exception {
+		return accountDAO.get(id);
+	}
 	
 	
 }
