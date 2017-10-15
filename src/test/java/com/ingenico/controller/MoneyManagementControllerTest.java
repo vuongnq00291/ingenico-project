@@ -42,7 +42,7 @@ public class MoneyManagementControllerTest {
 	}
 
 	@Test
-	public void createAccountTest() throws Exception {
+	public void transferTest() throws Exception {
 		Account from = new Account();
 		from.setId(3);
 		from.setBalance(100);
