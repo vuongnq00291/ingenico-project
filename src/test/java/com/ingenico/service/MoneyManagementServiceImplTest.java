@@ -19,14 +19,12 @@ import com.ingenico.model.TSException;
 @RunWith(SpringRunner.class)
 public class MoneyManagementServiceImplTest {
    @Autowired(required=true)
-   private MoneyManagementService moneyManagementService;
-   @Autowired
    private AccountManagementService accountService;
    @Test
    public void a_CreateOK() throws Exception{
 	   	Account accout = new Account();
 	   	accout.setBalance(100);
-	   	accout.setName("test3");
+	   	accout.setName("test3"); 
 		accountService.create(accout);
 		accout= accountService.get(1);
 		assertEquals(accout.getBalance(),new Double(100), 0.0);
