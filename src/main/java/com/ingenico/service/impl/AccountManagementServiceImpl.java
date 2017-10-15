@@ -8,9 +8,10 @@ import org.springframework.transaction.annotation.Transactional;
 import com.ingenico.dao.AccountManagementDAO;
 import com.ingenico.model.Account;
 import com.ingenico.model.TSException;
+import com.ingenico.service.AccountManagementService;
 
 @Service
-public class AccountManagementServiceImpl {
+public class AccountManagementServiceImpl implements AccountManagementService{
 	
 	@Autowired
 	private AccountManagementDAO accountDAO;
@@ -25,5 +26,6 @@ public class AccountManagementServiceImpl {
 		}
 		accountDAO.create(account);
     }
+	
 	
 }

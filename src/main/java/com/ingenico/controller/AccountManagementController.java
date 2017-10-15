@@ -11,12 +11,12 @@ import com.ingenico.annotation.TSController;
 import com.ingenico.cache.GlobalCache;
 import com.ingenico.model.Account;
 import com.ingenico.model.TSResponse;
-import com.ingenico.service.impl.AccountManagementServiceImpl;
+import com.ingenico.service.AccountManagementService;
 
 @TSController
 public class AccountManagementController {
 	@Autowired
-	private AccountManagementServiceImpl accountService;
+	private AccountManagementService accountService;
 	@Autowired
 	private GlobalCache cache;
 	@RequestMapping(value = "/account",method=RequestMethod.POST)

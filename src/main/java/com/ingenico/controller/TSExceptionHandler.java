@@ -21,6 +21,7 @@ public class TSExceptionHandler {
     	}else{
     		res.setError(ex.getLocalizedMessage());
     	}
+    	res.setStatus(0);
         return new ResponseEntity<TSResponse>(res, new HttpHeaders(), HttpStatus.OK);
 }
 }

@@ -13,7 +13,6 @@ public class TSResponse {
 		return error;
 	}
 	public void setError(String error) {
-		status = 0;
 		this.error = error;
 	}
 	

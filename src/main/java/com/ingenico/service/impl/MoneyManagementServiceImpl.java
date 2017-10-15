@@ -17,6 +17,13 @@ public class MoneyManagementServiceImpl implements MoneyManagementService {
     public void trasfer(int fromAccountId, int toAccountId, double amount) throws Exception {
 		Account from = accountDAOImpl.get(fromAccountId);
 		Account to = accountDAOImpl.get(toAccountId);
+		if(from==null){
+			throw new TSException("Account id "+fromAccountId +"does not exist.");
+		}
+		if(to==null){
+			throw new TSException("Account id "+toAccountId +"does not exist.");
+		}
+		
 		if(from.getBalance()<amount){
 			throw new TSException("Account balance is insufficient for this transaction.");
 		}
