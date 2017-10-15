@@ -1,4 +1,4 @@
-package com.ingenico.dao.impl;
+package com.ingenico.SpringJPA.impl;
 
 import java.util.List;
 
@@ -8,11 +8,11 @@ import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
-import com.ingenico.dao.AccountManagementDAO;
+import com.ingenico.SpringJPA.AccountManagementSpringJPA;
 import com.ingenico.model.Account;
 
 @Repository
-public class AccountManagementDAOImpl implements AccountManagementDAO{
+public class AccountManagementSpringJPAImpl implements AccountManagementSpringJPA{
     @PersistenceContext
     private EntityManager entityManager;
     

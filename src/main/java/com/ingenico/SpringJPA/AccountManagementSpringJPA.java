@@ -1,8 +1,8 @@
-package com.ingenico.dao;
+package com.ingenico.SpringJPA;
 
 import com.ingenico.model.Account;
 
-public interface AccountManagementDAO {
+public interface AccountManagementSpringJPA {
 	Account getByName(String name) ;
 	Account get(int id) throws Exception;
 	void create(Account account) throws Exception;
