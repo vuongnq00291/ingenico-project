@@ -55,9 +55,4 @@ in   other   codes   to   avoid   deadlock.
 
 
 # Database veryfing
-Go   to    http://localhost:8080/console/ Login   with   this   details
-
-
-
-
-![](ProjectGuide/ProjectGuide-4.png?raw=true)
+Go   to    http://localhost:8080/console/ Login   with   this   detailss
