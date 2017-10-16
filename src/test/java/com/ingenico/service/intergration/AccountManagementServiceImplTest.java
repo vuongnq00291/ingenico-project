@@ -51,4 +51,11 @@ public class AccountManagementServiceImplTest {
 	   	accout.setName("test3");
 		accountService.create(accout);
    }
+   @Test(expected = TSException.class)
+   public void d_createEmptyName() throws Exception{
+	   Account accout = new Account();
+	   	accout.setBalance(-100);
+	   	accout.setName("");
+		accountService.create(accout);
+   }
 }

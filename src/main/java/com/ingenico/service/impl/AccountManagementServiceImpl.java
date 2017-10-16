@@ -17,6 +17,9 @@ public class AccountManagementServiceImpl implements AccountManagementService{
 	private AccountManagementRepository accountDAO;
 	@Transactional(propagation=Propagation.REQUIRED,rollbackFor={Exception.class})
     public void create(Account account) throws Exception {
+		if(account.getName()==null || account.getName().trim().length()==0){
+			throw new TSException("Account name can not be empty.");
+		}
 		Account temp= accountDAO.getByName(account.getName());
 		if(temp!=null){
 			throw new TSException("Account name does exist.");
