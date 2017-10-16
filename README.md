@@ -14,9 +14,11 @@
 + **AccountManagementService** provide method to create and get account.  + + **MoneyManagementService** contain transferring implementation.
 + **ConcurrentService** handle concurrent request, provide locking mechanism and  deadlock preventing.
 + **Brief   of   implementation**:
---   Create   Account   table   with   field   (id,name,balance).   Name   is   not   duplicated   and   balance   can   not   be negative.
---   Deduce   balance   from   sender   account   and   credit   to   receiver   account   directly   when   transferring.
---   create a cache to store accountid and lock object,each accountid has a lock   object,   before   start transaction I lock 2 account (from and to)   and release them when transaction is finished to avoid conflict data between many transactions.
+  + Create   Account   table   with   field   (id,name,balance).   Name   is   not   duplicated   and   balance   can   not   be negative.
+  + Deduce   balance   from   sender   account   and   credit   to   receiver   account   directly   when   transferring.
+  + create a cache to store accountid and lock object,each accountid has a lock   object,   before   start transaction I lock 2 account (from and to)   and release them when transaction is finished to avoid conflict data between many transactions.
+
+
 #  Limitation
 
 +  when   locking   2   account   at   the   same   time,   need   to   check   carefully   when   using   2   those   locks      object
