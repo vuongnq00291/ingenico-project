@@ -5,16 +5,16 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ingenico.SpringJPA.AccountManagementSpringJPA;
 import com.ingenico.model.Account;
 import com.ingenico.model.TSException;
+import com.ingenico.repository.AccountManagementRepository;
 import com.ingenico.service.AccountManagementService;
 
 @Service
 public class AccountManagementServiceImpl implements AccountManagementService{
 	
 	@Autowired
-	private AccountManagementSpringJPA accountDAO;
+	private AccountManagementRepository accountDAO;
 	@Transactional(propagation=Propagation.REQUIRED,rollbackFor={Exception.class})
     public void create(Account account) throws Exception {
 		Account temp= accountDAO.getByName(account.getName());

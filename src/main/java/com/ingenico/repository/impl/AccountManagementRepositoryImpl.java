@@ -1,4 +1,4 @@
-package com.ingenico.SpringJPA.impl;
+package com.ingenico.repository.impl;
 
 import java.util.List;
 
@@ -8,11 +8,11 @@ import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
-import com.ingenico.SpringJPA.AccountManagementSpringJPA;
 import com.ingenico.model.Account;
+import com.ingenico.repository.AccountManagementRepository;
 
 @Repository
-public class AccountManagementSpringJPAImpl implements AccountManagementSpringJPA{
+public class AccountManagementRepositoryImpl implements AccountManagementRepository{
     @PersistenceContext
     private EntityManager entityManager;
     

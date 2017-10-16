@@ -5,14 +5,14 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ingenico.SpringJPA.impl.AccountManagementSpringJPAImpl;
 import com.ingenico.model.Account;
 import com.ingenico.model.TSException;
+import com.ingenico.repository.impl.AccountManagementRepositoryImpl;
 import com.ingenico.service.MoneyManagementService;
 @Repository
 public class MoneyManagementServiceImpl implements MoneyManagementService {
 	@Autowired
-	private AccountManagementSpringJPAImpl accountDAOImpl;
+	private AccountManagementRepositoryImpl accountDAOImpl;
 	@Transactional(propagation=Propagation.REQUIRED,rollbackFor={Exception.class})
     public void trasfer(int fromAccountId, int toAccountId, double amount) throws Exception {
 		Account from = accountDAOImpl.get(fromAccountId);
