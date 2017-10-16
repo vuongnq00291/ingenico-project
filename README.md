@@ -44,7 +44,7 @@ in   other   codes   to   avoid   deadlock.
 | Header| [{"key":"Content-Type","value":"application/json" ,"description":""}] |
 | Body | {"id":null,"balance":100.0,"name":"test"} |
 | Response   OK | {"status":   1,"error":   "Request   successful,   no   exception" }|
-| Response   Error | {"status":   0, "error":   "<Detail>" }|
+| Response   Error | {"status":   0, "error":   "Message detail" }|
 | Error   messages | Account   name   does   exist , Balance   must   be positive   number.|
 
 
@@ -55,7 +55,7 @@ in   other   codes   to   avoid   deadlock.
 | Header| [{"key":"Content-Type","value":"application/json" ,"description":""}] |
 | Body | {"fromAccountId":4,"toAccountId":5,"amount":1 00.0} |
 | Response   OK | {"status":   1,"error":   "Request   successful,   no   exception" }|
-| Response   Error | {"status":   0, "error":   "<Detail>" }|
+| Response   Error | {"status":   0, "error":   "Message detail" }|
 | Error   messages | Account   id   <id>   does   not   exist Account   , balance   is   insufficient   for   this transaction, Can   not   transfer   for   itself.|
 
 
