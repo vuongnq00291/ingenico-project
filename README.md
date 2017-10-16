@@ -45,7 +45,7 @@ in   other   codes   to   avoid   deadlock.
 | Error   messages | Account   name   does   exist , Balance   must   be positive   number.|
 
 
-| API | Create   new   account. |
+| API | Transfer money. |
 | ------ | ------ |
 | URL | http://localhost:8080/ingenico/transfer |
 | HTTP   METHOD | POST|
