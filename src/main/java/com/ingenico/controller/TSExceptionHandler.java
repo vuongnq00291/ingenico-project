@@ -14,14 +14,13 @@ import com.ingenico.model.TSResponse;
 public class TSExceptionHandler {
     @ExceptionHandler({ Exception.class })
     public ResponseEntity<TSResponse> handleAll(final Exception ex, final WebRequest request) {
-    	TSResponse res = new TSResponse();
+    	String error = "";
     	if(ex instanceof TSException){
     		TSException e = (TSException) ex;
-    		res.setError(e.getError());
+    		error = e.getError();
     	}else{
-    		res.setError(ex.getLocalizedMessage());
+    		error = ex.getLocalizedMessage();
     	}
-    	res.setStatus(0);
-        return new ResponseEntity<TSResponse>(res, new HttpHeaders(), HttpStatus.OK);
+        return new ResponseEntity<TSResponse>(new TSResponse(0, error), new HttpHeaders(), HttpStatus.OK);
 }
 }

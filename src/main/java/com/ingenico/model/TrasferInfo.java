@@ -6,6 +6,15 @@ public class TrasferInfo {
 	private int fromAccountId;
 	private int toAccountId;
 	private double amount;
+	
+	public TrasferInfo(){};
+	public TrasferInfo(int fromAccountId,int toAccountId,double amount){
+		this.fromAccountId = fromAccountId;
+		this.toAccountId = toAccountId;
+		this.amount = amount;
+		
+	}
+	
 	public int getFromAccountId() {
 		return fromAccountId;
 	}

@@ -1,4 +1,4 @@
-package com.ingenico.service;
+package com.ingenico.service.intergrate;
 
 import static org.junit.Assert.assertEquals;
 
@@ -12,12 +12,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.ingenico.model.Account;
 import com.ingenico.model.TSException;
+import com.ingenico.service.AccountManagementService;
 
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class MoneyManagementServiceImplTest {
+public class AccountManagementServiceImplTest {
    @Autowired(required=true)
    private AccountManagementService accountService;
    @Test

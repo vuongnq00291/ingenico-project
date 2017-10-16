@@ -22,7 +22,7 @@ public class AccountManagementController {
 	@RequestMapping(value = "/account",method=RequestMethod.POST)
 	public ResponseEntity<TSResponse> create(@RequestBody Account account) throws Exception{
 		accountService.create(account);
-		cache.addLock(account.getId());
+		cache.addLock(account.getId(),account);
 		return new ResponseEntity<TSResponse>(new TSResponse(),HttpStatus.OK);
 	}
 	
