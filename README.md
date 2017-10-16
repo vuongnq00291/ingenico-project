@@ -56,7 +56,7 @@ in   other   codes   to   avoid   deadlock.
 | Body | {"fromAccountId":4,"toAccountId":5,"amount":1 00.0} |
 | Response   OK | {"status":   1,"error":   "Request   successful,   no   exception" }|
 | Response   Error | {"status":   0, "error":   "Message detail" }|
-| Error   messages | Account   id   <id>   does   not   exist Account   , balance   is   insufficient   for   this transaction, Can   not   transfer   for   itself.|
+| Error   messages | Account   id   <id>   does   not   exist Account   , balance   is   insufficient   for   this transaction, Can   not   transfer   to   itself.|
 
 
 # Database veryfing
