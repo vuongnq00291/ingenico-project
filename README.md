@@ -1,2 +1,2 @@
 # ingenico-project
-please refer to Project Guide.pdf
+please refer to ProjectGuide.pdf

@@ -8,6 +8,8 @@ import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.ingenico.cache.GlobalCache;
@@ -20,6 +22,7 @@ import com.ingenico.service.MoneyManagementService;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 @SpringBootTest
 @RunWith(SpringRunner.class)
+@DirtiesContext(classMode = ClassMode.BEFORE_EACH_TEST_METHOD)
 public class MoneyManagementServiceImplTest {
    @Autowired(required=true)
    private MoneyManagementService moneyManagementService;
