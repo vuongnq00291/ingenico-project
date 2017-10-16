@@ -7,6 +7,8 @@
 
 
 # Solution Design verview.
+
+![](ProjectGuide/overview.png?raw=true)
 + **AccountManagementController** provide api to create new account.
 + **MoneyManagementController** provide transferring api.
 + **AccountManagementService** provide method to create and get account.  + + **MoneyManagementService** contain transferring implementation.
@@ -55,4 +57,5 @@ in   other   codes   to   avoid   deadlock.
 
 
 # Database veryfing
-Go   to    http://localhost:8080/console/ Login   with   this   detailss
+Go   to    http://localhost:8080/console/ Login   with   this   details
+![](ProjectGuide/db.png?raw=true)
