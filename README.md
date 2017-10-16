@@ -11,7 +11,8 @@
 ![](ProjectGuide/overview.png?raw=true)
 + **AccountManagementController** provide api to create new account.
 + **MoneyManagementController** provide transferring api.
-+ **AccountManagementService** provide method to create and get account.  + + **MoneyManagementService** contain transferring implementation.
++ **AccountManagementService** provide method to create and get account.  
++ **MoneyManagementService** contain transferring implementation.
 + **ConcurrentService** handle concurrent request, provide locking mechanism and  deadlock preventing.
 + **Brief   of   implementation**:
   + Create   Account   table   with   field   (id,name,balance).   Name   is   not   duplicated   and   balance   can   not   be negative.
