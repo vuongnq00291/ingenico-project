@@ -33,9 +33,7 @@ public class MoneyManagementController {
 		}
 		synchronized(lockfromaccount){
 			synchronized(locktoaccount){
-				System.out.println("start");
 				moneyManagementService.trasfer(info.getFromAccountId(), info.getToAccountId(), info.getAmount());
-				System.out.println("end");
 			}
 		}
 		return new ResponseEntity<TSResponse>(new TSResponse(),HttpStatus.OK);
