@@ -21,6 +21,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ingenico.cache.GlobalCache;
 import com.ingenico.model.Account;
 import com.ingenico.model.TSResponse;
+import com.ingenico.service.ConcurrentService;
 import com.ingenico.service.MoneyManagementService;
 
 //@FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -31,7 +32,8 @@ public class MoneyManagementControllerTest {
 	private MoneyManagementService moneyManagementService;
 	@Mock
 	private GlobalCache cache;
-
+	@Mock
+	private ConcurrentService concurrentService;
 	@InjectMocks
 	private MoneyManagementController controller;
 

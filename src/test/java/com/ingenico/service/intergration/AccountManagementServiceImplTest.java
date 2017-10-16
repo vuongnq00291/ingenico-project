@@ -1,4 +1,4 @@
-package com.ingenico.service.intergrate;
+package com.ingenico.service.intergration;
 
 import static org.junit.Assert.assertEquals;
 
